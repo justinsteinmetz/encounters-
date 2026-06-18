@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Framework and You — American Exceptionablism · Encounter 8</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #F8F8F6; --ink: #1C1C1C; --accent: #4A4A4A; --mid: rgba(28,28,28,0.45); }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+.screen { display: none; min-height: 100vh; flex-direction: column; justify-content: center; }
+.screen.active { display: flex; }
+.page { max-width: 680px; margin: 0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,2rem) clamp(4rem,8vw,7rem); width: 100%; }
+.eyebrow { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem,6vw,3.5rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+hr { border: none; border-top: 1px solid var(--ink); opacity: 0.1; margin: 2rem 0; }
+p.brief { font-size: 1rem; color: var(--mid); margin-bottom: 1rem; line-height: 1.75; }
+p.brief strong { color: var(--ink); font-weight: 500; }
+.warning-block { background: rgba(28,28,28,0.04); border: 1px solid rgba(28,28,28,0.1); padding: 1.4rem 1.75rem; margin: 1.5rem 0; }
+.warning-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+.warning-text { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(1rem,2.2vw,1.1rem); line-height: 1.75; color: var(--ink); }
+.warning-text p { margin: 0 0 0.85rem; }
+.warning-text p:last-child { margin-bottom: 0; }
+.question { font-family: 'DM Serif Display', serif; font-size: clamp(1.1rem,2.5vw,1.35rem); line-height: 1.35; margin: 1.75rem 0 0.75rem; }
+textarea { width: 100%; min-height: 90px; background: transparent; border: none; border-bottom: 1px solid rgba(28,28,28,0.15); font-family: 'DM Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ink); line-height: 1.6; padding: 8px 0; resize: none; outline: none; display: block; transition: border-color 0.15s; }
+textarea:focus { border-bottom-color: var(--ink); }
+textarea::placeholder { color: rgba(28,28,28,0.2); }
+.btn { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 2rem; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; transition: all 0.15s; margin-top: 1.75rem; display: inline-block; }
+.btn.primary { background: var(--ink); color: var(--bg); }
+.btn.primary:hover { opacity: 0.82; }
+.nav-row { display: flex; justify-content: flex-end; }
+.final-q { font-family: 'DM Serif Display', serif; font-size: clamp(1.2rem,3vw,1.7rem); line-height: 1.25; font-style: italic; }
+</style>
+</head>
+<body>
+
+<section class="screen active" id="s1">
+<div class="page">
+  <div class="eyebrow">American Exceptionablism · Encounter 8</div>
+  <h1>The Framework and You</h1>
+  <hr>
+  <p class="brief">You have now spent time with several analytical frameworks — ways of seeing how power works, how stories get made, how systems maintain themselves.</p>
+  <p class="brief">This encounter is not about another text. It is about you using the framework.</p>
+
+  <div class="warning-block">
+    <div class="warning-label">A note on what frameworks do</div>
+    <div class="warning-text">
+      <p>A framework is a tool for seeing. Like any tool, it shapes what you see. A hammer makes everything look like a nail. An analytical framework for identifying structural power makes everything look like structural power.</p>
+      <p>The most important sentence in this unit is: <strong>a framework that explains everything explains nothing.</strong> If every piece of evidence confirms the framework, something has gone wrong. You are no longer analysing — you are confirming.</p>
+      <p>Good frameworks are falsifiable. You can find evidence that complicates them, challenges them, or reveals where they break down. When you find that evidence, that is not a failure of the framework. That is the framework working correctly.</p>
+    </div>
+  </div>
+
+  <div class="question">Name one thing you have encountered in this unit that the framework explains well.</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s2')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s2">
+<div class="page">
+  <div class="warning-block">
+    <div class="warning-label">The second question</div>
+    <div class="warning-text">
+      <p>Havel wrote about Czechoslovakia — a country under foreign military occupation with a one-party state enforced by Soviet power. The framework he used to analyse it is powerful. But it was designed for that specific situation.</p>
+      <p>When Carney invokes Havel at Davos — in a room of the world's most powerful financial actors, at a conference that costs $50,000 to attend — the framework travels. But does it arrive intact? Or does something happen to it in transit?</p>
+    </div>
+  </div>
+
+  <div class="question">Name one thing the framework does not explain well — or where applying it feels forced.</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s3')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s3">
+<div class="page">
+  <p class="brief">Smart people slow down before deciding what structure they are seeing. That is a fundamentally different intellectual habit from smart people recognise structures quickly.</p>
+  <p class="brief">The encounter lessons in this unit were designed to slow you down before the framework arrived. You read Tommy Orange before you heard about Manifest Destiny. You read Lincoln before you read about the racial wealth gap. You read Havel before you read about American power.</p>
+  <p class="brief">That order mattered. The claim must be felt before it is analysed. Otherwise the analysis is sterile — correct but hollow.</p>
+
+  <div class="question">What would it mean to hold this framework lightly?</div>
+  <textarea placeholder="Write anything." rows="4"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s4')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s4">
+<div class="page">
+  <hr>
+  <p class="final-q">A framework that explains everything explains nothing.</p>
+  <br>
+  <p class="final-q" style="font-size:1rem; font-style:normal; font-family:'DM Mono',monospace; letter-spacing:0.06em; opacity:0.5; margin-top:1rem;">What does yours not explain?</p>
+</div>
+</section>
+
+<script>
+function goTo(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

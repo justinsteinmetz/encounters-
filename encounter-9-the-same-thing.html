@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Same Thing? — American Exceptionablism · Encounter 9</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-l: #1A0800; --bg-r: #0A0A14;
+  --ink-l: #E8C888; --ink-r: #C8D4E8;
+  --accent-l: #C87A20; --accent-r: #4A6A9A;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; min-height: 100vh; -webkit-font-smoothing: antialiased; background: var(--bg-l); color: var(--ink-l); }
+
+/* Split screen */
+.split { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+.split-l { background: var(--bg-l); color: var(--ink-l); padding: clamp(2.5rem,6vw,5rem) clamp(1.5rem,4vw,2.5rem); border-right: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; justify-content: flex-start; padding-top: clamp(3.5rem,8vw,7rem); }
+.split-r { background: var(--bg-r); color: var(--ink-r); padding: clamp(2.5rem,6vw,5rem) clamp(1.5rem,4vw,2.5rem); display: flex; flex-direction: column; justify-content: flex-start; padding-top: clamp(3.5rem,8vw,7rem); }
+.col-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.55; margin-bottom: 1rem; }
+.col-date { font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem,4vw,2.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
+.col-body { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(0.92rem,1.8vw,1.05rem); line-height: 1.75; opacity: 0.9; }
+.col-body p { margin: 0 0 0.85rem; }
+.col-body p:last-child { margin-bottom: 0; }
+.col-source { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; opacity: 0.35; margin-top: 1rem; }
+
+/* Single screen for question/final */
+.screen { display: none; min-height: 100vh; flex-direction: column; justify-content: center; background: #0D0D0D; color: #E0E0D8; }
+.screen.active { display: flex; }
+.page { max-width: 680px; margin: 0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,2rem) clamp(4rem,8vw,7rem); width: 100%; }
+.eyebrow { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(224,224,216,0.5); margin-bottom: 0.75rem; }
+h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem,6vw,3.5rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+hr { border: none; border-top: 1px solid rgba(224,224,216,0.1); margin: 2rem 0; }
+p.brief { font-size: 1rem; color: rgba(224,224,216,0.55); margin-bottom: 1rem; line-height: 1.75; }
+.question { font-family: 'DM Serif Display', serif; font-size: clamp(1.1rem,2.5vw,1.35rem); line-height: 1.35; margin: 1.75rem 0 0.75rem; color: #E0E0D8; }
+textarea { width: 100%; min-height: 90px; background: transparent; border: none; border-bottom: 1px solid rgba(224,224,216,0.15); font-family: 'DM Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: #E0E0D8; line-height: 1.6; padding: 8px 0; resize: none; outline: none; display: block; transition: border-color 0.15s; }
+textarea:focus { border-bottom-color: rgba(224,224,216,0.4); }
+textarea::placeholder { color: rgba(224,224,216,0.15); }
+.btn { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 2rem; border: 1px solid rgba(224,224,216,0.3); background: transparent; color: #E0E0D8; cursor: pointer; transition: all 0.15s; margin-top: 1.75rem; display: inline-block; }
+.btn.primary { background: rgba(224,224,216,0.1); border-color: rgba(224,224,216,0.4); }
+.btn.primary:hover { background: rgba(224,224,216,0.15); }
+.nav-row { display: flex; justify-content: flex-end; }
+.final-q { font-family: 'DM Serif Display', serif; font-size: clamp(1.2rem,3vw,1.7rem); line-height: 1.25; font-style: italic; color: #E0E0D8; }
+
+/* Split-screen begin button */
+.split-begin { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 10; }
+
+@media (max-width: 600px) {
+  .split { grid-template-columns: 1fr; }
+  .split-l { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- SPLIT SCREEN: 1492 | 1938 -->
+<div class="split" id="split-view">
+  <div class="split-l">
+    <div class="col-eyebrow">American Exceptionablism · Encounter 9</div>
+    <div class="col-date">1492</div>
+    <div class="col-body">
+      <p>"This island and all the others are very fertile to a limitless degree... Here there are many spices, and great mines of gold and other metals. The people of this island... are artless and generous with what they have... They have no iron or steel or weapons, nor are they capable of using them... They are so guileless and so generous with all that they possess, that no one would believe it who has not seen it."</p>
+      <p>"I have taken possession of all of them for their highnesses, by proclamation and by unfurling the royal standard, without opposition."</p>
+    </div>
+    <div class="col-source">Christopher Columbus · Journal · October–December 1492 · Translated from the Spanish</div>
+  </div>
+
+  <div class="split-r">
+    <div class="col-eyebrow" style="color:var(--accent-r);">The Same Document · 446 Years Later</div>
+    <div class="col-date" style="color:var(--ink-r);">1938</div>
+    <div class="col-body" style="color:var(--ink-r);">
+      <p>"The area is not desirable for mortgage lending purposes. Infiltration of: Negroes. This area contains substandard properties and a concentration of undesirable population elements. The area is declining and loans should not be made here."</p>
+      <p>"Security Grade: D — Hazardous. No A or B mortgage money should be made available in this area."</p>
+    </div>
+    <div class="col-source" style="color:rgba(200,212,232,0.3);">HOLC Area Description File · Detroit, Area D-7 · 1938 · National Archives</div>
+  </div>
+</div>
+
+<div class="split-begin">
+  <button class="btn primary" onclick="goTo('s2')">What do you notice? →</button>
+</div>
+
+<!-- QUESTION SCREEN -->
+<section class="screen" id="s2">
+<div class="page">
+  <div class="eyebrow">Encounter 9 · The Same Thing?</div>
+  <h1>What do you notice?</h1>
+  <hr>
+  <p class="brief">Two documents. 446 years apart. One is a journal entry by a European explorer claiming land for a Spanish monarch. The other is an administrative note by a US federal agency classifying a neighbourhood for mortgage risk.</p>
+  <p class="brief">They are not the same document. But they share something.</p>
+
+  <div class="question">What do they share?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="question" style="margin-top:2rem;">What is different about them?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s3')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s3">
+<div class="page">
+  <p class="brief">Both documents describe people as passive objects to be assessed by an outside authority. Both produce a classification that determines what resources those people can access. Both claim a kind of neutral authority — the explorer speaks for the Crown and God; the assessor speaks for the federal government and the market.</p>
+  <p class="brief">Neither document acknowledges that it is making a choice. Both present themselves as describing what is already there.</p>
+  <p class="brief">The frame through which you see something determines what you see. The frame is never neutral. But the frame always claims to be.</p>
+
+  <div class="question">What would it change — practically, not analytically — if these were the same thing?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="question" style="margin-top:2rem;">What becomes invisible if we decide they are the same thing?</div>
+  <textarea placeholder="Every analogy illuminates. Every analogy conceals." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s4')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s4">
+<div class="page">
+  <hr>
+  <p class="final-q">What would it change — practically, not analytically — if these were the same thing?</p>
+  <br>
+  <p class="final-q" style="font-size:1rem; font-style:normal; font-family:'DM Mono',monospace; letter-spacing:0.06em; opacity:0.5; margin-top:0.5rem;">What becomes invisible if you decide they are?</p>
+</div>
+</section>
+
+<script>
+function goTo(id) {
+  // Hide split view
+  document.getElementById('split-view').style.display = 'none';
+  document.querySelector('.split-begin').style.display = 'none';
+  // Show screens
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

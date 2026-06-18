@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Practices — American Exceptionablism · Encounter 7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #1A1006; --ink: #E8D8B8; --accent: #8B6A3A; --light: #C8A870; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+.screen { display: none; min-height: 100vh; flex-direction: column; justify-content: center; }
+.screen.active { display: flex; }
+.page { max-width: 680px; margin: 0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,2rem) clamp(4rem,8vw,7rem); width: 100%; }
+.eyebrow { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light); margin-bottom: 0.75rem; }
+h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem,6vw,3.5rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+hr { border: none; border-top: 1px solid var(--ink); opacity: 0.1; margin: 2rem 0; }
+p.brief { font-size: 1rem; color: rgba(232,216,184,0.6); margin-bottom: 1rem; line-height: 1.75; }
+p.brief strong { color: var(--ink); font-weight: 500; }
+.source-block { background: rgba(139,106,58,0.1); border-left: 3px solid var(--accent); padding: 1.4rem 1.75rem; margin: 1.5rem 0; }
+.source-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); margin-bottom: 0.6rem; }
+.source-text { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(1rem,2.2vw,1.12rem); line-height: 1.75; color: var(--ink); }
+.source-text p { margin: 0 0 0.85rem; }
+.source-text p:last-child { margin-bottom: 0; }
+.source-cite { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(232,216,184,0.3); margin-top: 0.75rem; }
+.question { font-family: 'DM Serif Display', serif; font-size: clamp(1.1rem,2.5vw,1.35rem); line-height: 1.35; margin: 1.75rem 0 0.75rem; }
+textarea { width: 100%; min-height: 90px; background: transparent; border: none; border-bottom: 1px solid rgba(232,216,184,0.18); font-family: 'DM Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ink); line-height: 1.6; padding: 8px 0; resize: none; outline: none; display: block; transition: border-color 0.15s; }
+textarea:focus { border-bottom-color: var(--light); }
+textarea::placeholder { color: rgba(232,216,184,0.15); }
+.btn { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 2rem; border: 1px solid rgba(232,216,184,0.25); background: transparent; color: var(--ink); cursor: pointer; transition: all 0.15s; margin-top: 1.75rem; display: inline-block; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn.primary:hover { opacity: 0.85; }
+.nav-row { display: flex; justify-content: flex-end; }
+.final-q { font-family: 'DM Serif Display', serif; font-size: clamp(1.2rem,3vw,1.7rem); line-height: 1.25; font-style: italic; }
+</style>
+</head>
+<body>
+
+<section class="screen active" id="s1">
+<div class="page">
+  <div class="eyebrow">American Exceptionablism · Encounter 7</div>
+  <h1>The Practices</h1>
+  <hr>
+  <p class="brief">Leanne Betasamosake Simpson is an Anishinaabe writer, musician, and scholar from Alderville First Nation in Ontario. In her book <em>As We Have Always Done</em> (2017), she writes about Binoojiinh — a child — learning to make maple sugar.</p>
+
+  <div class="source-block">
+    <div class="source-label">Leanne Betasamosake Simpson — As We Have Always Done · 2017</div>
+    <div class="source-text">
+      <p>Binoojiinh makes a lovely discovery. She is outside in late winter, and she finds the sap running in the maple trees. She knows what this means — she has seen the practices, heard the stories, been with the adults when they did this work. The sap is running, and she knows what to do with it, and she does it.</p>
+      <p>She is not being taught. She is not in a classroom. She is not being tested. She is practicing — and in practicing, she is carrying the knowledge forward. The knowledge exists in the doing of it. It does not exist in any other form. It cannot be written down in a way that captures it. It cannot be stored in a database. It lives in relationship, in body, in place, in practice.</p>
+      <p>If Binoojiinh is removed from the land, from the sap, from the trees, from the season, from the adults who know this — the knowledge does not survive. Not because she forgot it. Because it cannot be separated from the conditions in which it exists.</p>
+    </div>
+    <div class="source-cite">Leanne Betasamosake Simpson · As We Have Always Done · 2017</div>
+  </div>
+
+  <div class="question">What do you know that you did not learn in a classroom?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s2')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s2">
+<div class="page">
+  <p class="brief">Simpson is making an argument about epistemology — about how knowledge works, where it lives, and what happens when its conditions are destroyed.</p>
+  <p class="brief">The residential school system in Canada — and the equivalent systems in the United States — removed Indigenous children from their families, communities, and land. The stated purpose was assimilation. The effect was the systematic destruction of the conditions in which Indigenous knowledge existed.</p>
+  <p class="brief">This was not accidental. The destruction of the conditions of knowledge is a form of knowledge destruction. <strong>The last residential school in Canada closed in 1996.</strong></p>
+
+  <div class="source-block">
+    <div class="source-label">The policy and its logic</div>
+    <div class="source-text">
+      <p>Richard Henry Pratt, founder of the Carlisle Indian Industrial School, Pennsylvania, 1892: "Kill the Indian in him, and save the man." The policy was designed to separate the child from the conditions in which their knowledge — their language, their practices, their relationship to land — existed. Once separated long enough, the knowledge does not return. It lives in practice or it does not live.</p>
+    </div>
+    <div class="source-cite">Richard Henry Pratt · Address to the Convention of Charities · 1892</div>
+  </div>
+
+  <div class="question">Can something that lives in practice be destroyed by policy?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s3')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s3">
+<div class="page">
+  <hr>
+  <p class="final-q">What do you know that you did not learn in a classroom?</p>
+  <br>
+  <p class="final-q" style="font-size:1rem; font-style:normal; font-family:'DM Mono',monospace; letter-spacing:0.06em; opacity:0.5; margin-top:1rem;">Where does it live?</p>
+</div>
+</section>
+
+<script>
+function goTo(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

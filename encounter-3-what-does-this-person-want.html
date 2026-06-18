@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Does This Person Want? — American Exceptionablism · Encounter 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #0D1B2A; --ink: #E8EDF2; --accent: #4A7FA5; --gold: #C9A84C; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+.screen { display: none; min-height: 100vh; flex-direction: column; justify-content: center; }
+.screen.active { display: flex; }
+.page { max-width: 680px; margin: 0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,2rem) clamp(4rem,8vw,7rem); width: 100%; }
+.eyebrow { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem,6vw,3.5rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; color: var(--ink); }
+hr { border: none; border-top: 1px solid var(--ink); opacity: 0.12; margin: 2rem 0; }
+p.brief { font-size: 1rem; color: rgba(232,237,242,0.6); margin-bottom: 1rem; line-height: 1.75; }
+p.brief strong { color: var(--ink); font-weight: 500; }
+.source-block { background: rgba(74,127,165,0.08); border-left: 3px solid var(--gold); padding: 1.4rem 1.75rem; margin: 1.5rem 0; }
+.source-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; opacity: 0.8; }
+.source-text { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(1rem,2.2vw,1.12rem); line-height: 1.75; color: var(--ink); }
+.source-text p { margin: 0 0 0.85rem; }
+.source-text p:last-child { margin-bottom: 0; }
+.source-cite { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(232,237,242,0.35); margin-top: 0.75rem; }
+.question { font-family: 'DM Serif Display', serif; font-size: clamp(1.1rem,2.5vw,1.35rem); line-height: 1.35; margin: 1.75rem 0 0.75rem; color: var(--ink); }
+textarea { width: 100%; min-height: 90px; background: transparent; border: none; border-bottom: 1px solid rgba(232,237,242,0.2); font-family: 'DM Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ink); line-height: 1.6; padding: 8px 0; resize: none; outline: none; display: block; transition: border-color 0.15s; }
+textarea:focus { border-bottom-color: var(--gold); }
+textarea::placeholder { color: rgba(232,237,242,0.18); }
+.btn { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 2rem; border: 1px solid rgba(232,237,242,0.3); background: transparent; color: var(--ink); cursor: pointer; transition: all 0.15s; margin-top: 1.75rem; display: inline-block; }
+.btn.primary { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.btn.primary:hover { opacity: 0.85; }
+.nav-row { display: flex; justify-content: flex-end; }
+.final-q { font-family: 'DM Serif Display', serif; font-size: clamp(1.2rem,3vw,1.7rem); line-height: 1.25; font-style: italic; color: var(--ink); }
+</style>
+</head>
+<body>
+
+<section class="screen active" id="s1">
+<div class="page">
+  <div class="eyebrow">American Exceptionablism · Encounter 3</div>
+  <h1>What Does This Person Want?</h1>
+  <hr>
+  <p class="brief">Read this speech cold. Don't look up the context yet. Just read it as a piece of writing and ask: what does this person want?</p>
+
+  <div class="source-block">
+    <div class="source-label">A speech · Washington D.C. · 1865</div>
+    <div class="source-text">
+      <p>With malice toward none, with charity for all, with firmness in the right as God gives us to see the right, let us strive on to finish the work we are in, to bind up the nation's wounds, to care for him who shall have borne the battle and for his widow and his orphan, to do all which may achieve and cherish a just and lasting peace among ourselves and with all nations.</p>
+    </div>
+  </div>
+
+  <div class="question">What does this person want?</div>
+  <textarea placeholder="Write anything — your first impression." rows="3"></textarea>
+
+  <div class="question" style="margin-top:2rem;">Is this a hopeful speech or a grief speech?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s2')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s2">
+<div class="page">
+  <p class="brief">The speech is Abraham Lincoln's Second Inaugural Address, delivered March 4, 1865 — five weeks before his assassination, and five weeks before the end of the Civil War.</p>
+  <p class="brief">The full speech is 703 words. It is the shortest inaugural address in American history. It mentions God fourteen times. It does not mention victory.</p>
+
+  <div class="source-block">
+    <div class="source-label">The middle of the same speech</div>
+    <div class="source-text">
+      <p>Fondly do we hope, fervently do we pray, that this mighty scourge of war may speedily pass away. Yet, if God wills that it continue until all the wealth piled by the bondsman's two hundred and fifty years of unrequited toil shall be sunk, and until every drop of blood drawn with the lash shall be paid by another drawn with the sword, as was said three thousand years ago, so still it must be said "the judgments of the Lord are true and righteous altogether."</p>
+    </div>
+    <div class="source-cite">Abraham Lincoln · Second Inaugural Address · March 4, 1865</div>
+  </div>
+
+  <div class="question">Does this change your answer to either question?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s3')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s3">
+<div class="page">
+  <p class="brief">Lincoln is saying: the war is God's punishment on America for slavery. Not on the South. On America. The blood drawn with the sword is payment for the blood drawn with the lash — two hundred and fifty years of it.</p>
+  <p class="brief">This is not a victorious speech. It is a speech about debt. About what a nation owes for what it has done.</p>
+  <p class="brief">Five weeks later, Lincoln was dead. The debt was not paid. Reconstruction lasted twelve years and then ended. The lash returned in other forms.</p>
+
+  <div class="question">Can a speech be both hopeful and a diagnosis of failure?</div>
+  <textarea placeholder="Write anything." rows="3"></textarea>
+
+  <div class="nav-row">
+    <button class="btn primary" onclick="goTo('s4')">Continue →</button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="s4">
+<div class="page">
+  <hr>
+  <p class="final-q">Is this a hopeful speech or a grief speech?</p>
+  <br>
+  <p class="final-q">Can it be both?</p>
+</div>
+</section>
+
+<script>
+function goTo(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
